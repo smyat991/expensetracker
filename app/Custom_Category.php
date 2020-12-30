@@ -9,4 +9,5 @@ class Custom_Category extends Model
     protected $fillable = [
         'category_name',
     ];
+    // abcdefg
 }
