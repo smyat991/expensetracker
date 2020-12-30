@@ -10,4 +10,4 @@ class Expense_Category extends Model
         'category_name',
     ];
 }
-}
+
