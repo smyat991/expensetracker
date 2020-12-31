@@ -137,7 +137,7 @@
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="map-google.html"
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{route('expense_categories.index')}}"
                                 aria-expanded="false">
                                 <i class="fa fa-table" aria-hidden="true"></i>
                                 <span class="hide-menu">Categories</span>
@@ -187,24 +187,7 @@
             <!-- ============================================================== -->
             <!-- Bread crumb and right sidebar toggle -->
             <!-- ============================================================== -->
-            <div class="page-breadcrumb bg-white">
-                <div class="row align-items-center">
-                    <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                        <h4 class="page-title text-uppercase font-medium font-14">Dashboard</h4>
-                    </div>
-                    <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
-                        <div class="d-md-flex">
-                            <ol class="breadcrumb ml-auto">
-                                <li><a href="#">Dashboard</a></li>
-                            </ol>
-                            <a href="https://wrappixel.com/templates/ampleadmin/" target="_blank"
-                                class="btn btn-danger  d-none d-md-block pull-right m-l-20 hidden-xs hidden-sm waves-effect waves-light">Upgrade
-                                to Pro</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- /.col-lg-12 -->
-            </div>
+            
             <!-- ============================================================== -->
             <!-- End Bread crumb and right sidebar toggle -->
             <!-- ============================================================== -->
@@ -236,14 +219,14 @@
     <!-- ============================================================== -->
     <!-- All Jquery -->
     <!-- ============================================================== -->
-    <script src="{{asset('backend_assets/plugins/bower_components/jquery/dist/jquery.min.js')}}"></script>
+    <script src="{{asset('backend_assets/plugins/bower_components/jquery/dist/jquery.min.js')}}"></script> 
     <!-- Bootstrap tether Core JavaScript -->
-    <script src="{{asset('backend_assets/plugins/bower_components/popper.js/dist/umd/popper.min.js')}}"></script>
+    <script src="{{asset('backend_assets/plugins/bower_components/popper.js/dist/umd/popper.min.js')}}"></script> 
     <script src="{{asset('backend_assets/bootstrap/dist/js/bootstrap.min.js')}}"></script>
-    <script src="{{asset('backend_assets/js/app-style-switcher.js')}}"></script>
+    <script src="{{asset('backend_assets/js/app-style-switcher.js')}}"></script> 
     <script src="{{asset('backend_assets/plugins/bower_components/jquery-sparkline/jquery.sparkline.min.js')}}"></script>
     <!--Wave Effects -->
-    <script src="{{asset('backend_assets/js/waves.js')}}"></script>
+    <script src="{{asset('backend_assets/js/waves.js')}}"></script> 
     <!--Menu sidebar -->
     <script src="{{asset('backend_assets/js/sidebarmenu.js')}}"></script>
     <!--Custom JavaScript -->
@@ -251,7 +234,7 @@
     <!--This page JavaScript -->
     <!--chartis chart-->
     <script src="{{asset('backend_assets/plugins/bower_components/chartist/dist/chartist.min.js')}}"></script>
-    <script src="{{asset('backend_assets/plugins/bower_components/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js')}}"></script>
+   <script src="{{asset('backend_assets/plugins/bower_components/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js')}}"></script> 
     <script src="{{asset('backend_assets/js/pages/dashboards/dashboard1.js')}}"></script>
 </body>
 

@@ -21,4 +21,8 @@ use Illuminate\Support\Facades\Route;
 //backend
 Route::get('dashboard','BackendController@dashboard')->name('dashboardpage');
 
+Route::resource('expense_categories','ExpenseCategoriesController');
+
+
+
 
