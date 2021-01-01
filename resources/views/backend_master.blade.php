@@ -50,13 +50,13 @@
                         <!-- Logo icon -->
                         <b class="logo-icon">
                             <!-- Dark Logo icon -->
-                            <img src="{{asset('backend_assets/plugins/images/logo-icon.png')}}" alt="homepage" />
+                            <img src="{{asset('backend_assets/plugins/images/logo-icon.png')}}" alt="homepage" /> 
                         </b>
                         <!--End Logo icon -->
                         <!-- Logo text -->
                         <span class="logo-text">
                             <!-- dark Logo text -->
-                            <img src="{{asset('backend_assets/plugins/images/logo-text.png')}}" alt="homepage" />
+                            <img src="{{asset('backend_assets/plugins/images/logo-text.png')}}" alt="homepage" /> 
                         </span>
                     </a>
                     <!-- ============================================================== -->
@@ -140,10 +140,17 @@
                             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{route('expense_categories.index')}}"
                                 aria-expanded="false">
                                 <i class="fa fa-table" aria-hidden="true"></i>
-                                <span class="hide-menu">Categories</span>
+                                <span class="hide-menu">Expense Categories</span>
                             </a>
                         </li>
                         <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{route('income_categories.index')}}"
+                                aria-expanded="false">
+                                <i class="fa fa-table" aria-hidden="true"></i>
+                                <span class="hide-menu">Income Categories</span>
+                            </a>
+                        </li>
+                       <!--  <li class="sidebar-item">
                             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="fontawesome.html"
                                 aria-expanded="false">
                                 <i class="fa fa-font" aria-hidden="true"></i>
@@ -169,7 +176,7 @@
                             <a href="https://www.wrappixel.com/templates/ampleadmin/"
                                 class="btn btn-block btn-danger text-white" target="_blank">
                                 Upgrade to Pro</a>
-                        </li>
+                        </li> -->
                     </ul>
 
                 </nav>

@@ -23,6 +23,12 @@ Route::get('dashboard','BackendController@dashboard')->name('dashboardpage');
 
 Route::resource('expense_categories','ExpenseCategoriesController');
 
+Route::resource('income_categories','IncomeCategoriesController');
 
 
 
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
