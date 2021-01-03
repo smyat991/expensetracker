@@ -13,10 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-/*Route::get('/', function () {
-    return view('welcome');
-});
-*/
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
 
 //backend
 Route::get('dashboard','BackendController@dashboard')->name('dashboardpage');
@@ -32,3 +32,22 @@ Route::resource('income_categories','IncomeCategoriesController');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+//frontend
+
+Route::get('home1', 'FrontendController@home1')->name('home1');
+
+Route:: get('user', 'FrontendController@user')-> name('user');
+
+Route:: get('addCustomCategory', 'FrontendController@addCustomCategory')->name('addCustomCategory');
+
+Route:: get('addExpense', 'FrontendController@addExpense')-> name('addExpense');
+
+Route:: get('addIncome', 'FrontendController@addIncome')-> name('addIncome');
+
+Route:: get('customCategoryTable', 'FrontendController@customCategoryTable')-> name('customCategoryTable');
+
+Route::get('expenseTable', 'FrontendController@expenseTable')->name('expenseTable');
+
+Route::get('incomeTable', 'FrontendController@incomeTable')->name('incomeTable');
