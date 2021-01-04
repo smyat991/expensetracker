@@ -19,23 +19,16 @@ use Illuminate\Support\Facades\Route;
 
 
 //backend
+Route::middleware('role:admin')->group(function() {
 Route::get('dashboard','BackendController@dashboard')->name('dashboardpage');
 
 Route::resource('expense_categories','ExpenseCategoriesController');
 
 Route::resource('income_categories','IncomeCategoriesController');
-
-
-
-
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+});
 
 
 //frontend
-
 Route::get('home1', 'FrontendController@home1')->name('home1');
 
 Route:: get('user', 'FrontendController@user')-> name('user');
@@ -51,3 +44,11 @@ Route:: get('customCategoryTable', 'FrontendController@customCategoryTable')-> n
 Route::get('expenseTable', 'FrontendController@expenseTable')->name('expenseTable');
 
 Route::get('incomeTable', 'FrontendController@incomeTable')->name('incomeTable');
+
+
+//authentication
+Auth::routes(['verify' => true]);
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+
