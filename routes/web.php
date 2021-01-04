@@ -29,7 +29,7 @@ Route::resource('income_categories','IncomeCategoriesController');
 
 
 //frontend
-/*Route::get('home1', 'FrontendController@home1')->name('home1');
+Route::get('home1', 'FrontendController@home1')->name('home1');
 
 Route::get('user','FrontendController@user')->name('user');
 
@@ -44,7 +44,7 @@ Route:: get('customCategoryTable', 'FrontendController@customCategoryTable')-> n
 
 Route::get('expenseTable', 'FrontendController@expenseTable')->name('expenseTable');
 
-Route::get('incomeTable', 'FrontendController@incomeTable')->name('incomeTable');*/
+Route::get('incomeTable', 'FrontendController@incomeTable')->name('incomeTable');
 
 //addexpense
 Route::resource('expense_list','AddExpenseController');

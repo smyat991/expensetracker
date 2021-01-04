@@ -20,9 +20,8 @@
 </head>
 
 <body class="">
-  
   <div class="wrapper ">
-    <div class="sidebar" data-color="white" data-active-color="danger">
+    <div class="sidebar" data-color="white">
       <div class="logo">
         <a href="https://www.creative-tim.com" class="simple-text logo-mini">
           <div class="logo-image-small">
@@ -31,51 +30,59 @@
           <!-- <p>CT</p> -->
         </a>
         <a href="https://www.creative-tim.com" class="simple-text logo-normal">
-          Creative Tim
-          {{-- <div class="logo-image-big">
+          Expense Tracker
+          <!-- <div class="logo-image-big">
             <img src="../assets/img/logo-big.png">
-          </div> 
-        </a> --}}
+          </div> -->
+        </a>
       </div>
       <div class="sidebar-wrapper">
         <ul class="nav">
-          <li class="active ">
+          <li class="active">
             <a href="./home.html">
-              <i class="nc-icon nc-bank"></i>
-              <p>Home</p>
+              <i class="nc-icon nc-bank" style="color:white;"></i>
+              <p style="color:white;">Home</p>
             </a>
           </li>
 
           <li>
             <a href="./user.html">
-              <i class="nc-icon nc-single-02"></i>
-              <p>User Profile</p>
+              <i class="nc-icon nc-single-02" style="color:white;"></i>
+              <p style="color:white;">User Profile</p>
             </a>
           </li>
           <li>
-            <a href="{{route('expense_list.index')}}">
-              <i class="nc-icon nc-diamond"></i>
-              <p>Expense Record</p>
+            <a href="./icons.html">
+              <i class="nc-icon nc-money-coins" style="color:white;"></i>
+              <p style="color:white;">Expense Record</p>
             </a>
           </li>
           <li>
-            <a href="{{route('income_list.index')}}">
-              <i class="nc-icon nc-pin-3"></i>
-              <p>Income Record</p>
+            <a href="./map.html">
+              <i class="nc-icon nc-money-coins" style="color:#ffffff;"></i>
+              <p style="color:#ffffff;">Income Record</p>
             </a>
           </li>
+          
+
           <li>
             <a href="./tables.html">
-              <i class="nc-icon nc-tile-56"></i>
-              <p>Custom Category</p>
+              <i class="nc-icon nc-tile-56" style="color:white;"></i>
+              <p style="color:white;">Custom Category</p>
             </a>
           </li>
           <li>
             <a href="./typography.html">
-              <i class="nc-icon nc-caps-small"></i>
-              <p>Logout</p>
+              <i class="nc-icon nc-button-power" style="color:white;"></i>
+              <p style="color:white;">Logout</p>
             </a>
           </li>
+          <!-- <li class="active-pro">
+            <a href="./upgrade.html">
+              <i class="nc-icon nc-spaceship"></i>
+              <p>Upgrade to PRO</p>
+            </a>
+          </li> -->
         </ul>
       </div>
     </div>
@@ -125,6 +132,7 @@
                     <span class="d-lg-none d-md-block">Some Actions</span>
                   </p>
                 </a>
+
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
                   <a class="dropdown-item" href="#">Action</a>
                   <a class="dropdown-item" href="#">Another action</a>
@@ -143,6 +151,7 @@
           </div>
         </div>
       </nav>
+      <!-- End Navbar -->
   
 
   @yield('content')
@@ -153,18 +162,21 @@
           <div class="row">
             <nav class="footer-nav">
               <ul>
-                <li><a href="https://www.creative-tim.com" target="_blank">Contact Us</a></li>
-                <li><a href="https://www.creative-tim.com/blog" target="_blank">Log Out</a></li>
+                <li><a href="https://www.creative-tim.com" target="_blank">Log Out</a></li>
+                <li><a href="https://www.creative-tim.com/blog" target="_blank">Contact Us</a></li>
+                <!-- <li><a href="https://www.creative-tim.com/license" target="_blank">Licenses</a></li> -->
               </ul>
             </nav>
-            <div class="credits ml-auto">
+            <div class="credits ml-5">
               <span class="copyright">
-                © 2020 All Rights Reserved
+                © 2021 All Rights Reserved
               </span>
             </div>
           </div>
         </div>
       </footer>
+    </div>
+  </div>
 
   <!--   Core JS Files   -->
   <script src="{{ asset('frontend_assets/js/core/jquery.min.js')}}"></script>

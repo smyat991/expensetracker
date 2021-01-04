@@ -3012,6 +3012,7 @@ License - nucleoapp.com/license/
   .off-canvas-sidebar .sidebar-wrapper {
     position: relative;
     height: calc(100vh - 75px);
+    background: linear-gradient(to bottom right, #33ccff 0%, #fa98ed 100%);
     overflow: auto;
     width: 260px;
     z-index: 4;

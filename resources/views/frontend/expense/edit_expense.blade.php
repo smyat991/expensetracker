@@ -4,9 +4,10 @@
     
     <div class="row">
       <div class="col-md-12">
-        <div class="tile">
-          <div class="tile-body">
-            
+        <div class="class">
+          <div class="card-header">
+            <h4 class="card-title">Add Expense</h4>
+          </div>  
             
             <form method="post" action="" enctype="multipart/form-data" class="mt-3">
               @csrf
