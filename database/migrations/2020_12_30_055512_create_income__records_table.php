@@ -24,8 +24,7 @@ class CreateIncomeRecordsTable extends Migration
             $table-> unsignedBigInteger('income_category_id');
             $table->foreign('income_category_id')->references('id')->on('income__categories')-> onDelete('cascade');
 
-            $table-> unsignedBigInteger('custom_category_id');
-            $table->foreign('custom_category_id')->references('id')->on('custom__categories')-> onDelete('cascade');
+            
 
             $table->timestamps();
         });

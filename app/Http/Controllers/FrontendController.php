@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-<<<<<<< Updated upstream
 
 class FrontendController extends Controller
 {
@@ -49,20 +48,5 @@ class FrontendController extends Controller
 }
 
 
-=======
-use App\Expense_Category;
 
-class FrontendController extends Controller
-{
-     public function index($value='')
-  {
-    return view('frontend.expense.index');
-  }
 
-  public function expense_list($value='')
-  {
-    return view('frontend.expense.expense_list');
-  }
- 
-}
->>>>>>> Stashed changes

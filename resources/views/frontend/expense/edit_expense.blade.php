@@ -1,8 +1,7 @@
 @extends('frontend_master');
 @section('content')
-	<!--expense record form-->
+	
     
-
     <div class="row">
       <div class="col-md-12">
         <div class="tile">
@@ -10,12 +9,6 @@
             
             
             <form method="post" action="" enctype="multipart/form-data" class="mt-3">
-              {{-- 
-              <div class="form-group">
-                <label for="codeInput">Date:</label>
-                <input type="number" name="codeno" class="form-control" id="codeInput" value="">
-              </div> --}}
-              
               @csrf
               @method('PUT')
               <div class="form-group">
@@ -46,7 +39,7 @@
               </div>
               
               <div class="form-group">
-                          <input type="submit" name="btn-submit" value="Save" class="btn btn-primary">
+                  <input type="submit" name="btn-submit" value="Save" class="btn btn-primary">
               </div>
             </form>
           </div>

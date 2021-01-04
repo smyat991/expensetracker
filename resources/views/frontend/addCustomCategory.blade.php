@@ -34,7 +34,7 @@
             </a>
           </li>
           <li>
-            <a href="./icons.html">
+            <a href="">
               <i class="nc-icon nc-diamond"></i>
               <p>Add Expense</p>
             </a>

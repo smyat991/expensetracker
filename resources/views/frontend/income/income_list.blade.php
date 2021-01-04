@@ -7,7 +7,7 @@
       <div class="col-md-12">
         <div class="tile">
           <div class="tile-body">
-            <h5 class="d-inline-block">Your Expense List</h5> 
+            <h5 class="d-inline-block">Your Income List</h5> 
             
 
             <div class="table-responsive mt-3">
@@ -18,12 +18,12 @@
                     <th>Amount</th>
                     <th>Note</th>
                     <th>User_id</th>
-                    <th>Expense_category_id</th>
+                    <th>Income_category_id</th>
                     <th>Action</th>
                   </tr>
                 </thead>
                 <tbody>
-                  @php $i=1; @endphp
+                  {{-- @php $i=1; @endphp
                   @foreach($expense_Records as $expense_Record)
                   <tr>
                     <td>{{$i++}}</td> 
@@ -40,7 +40,7 @@
                       </form> 
                     </th>
                   </tr>
-                  @endforeach
+                  @endforeach --}}
                 </tbody>
               </table>
             </div>

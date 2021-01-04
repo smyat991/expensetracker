@@ -27,7 +27,7 @@ class AddExpenseController extends Controller
     public function create()
     {
         $expense_Categories=Expense_Category::all();
-        return view('frontend.expense.addexpense',compact('expense_Categories'));
+        return view('frontend.expense.add_expense',compact('expense_Categories'));
     }
 
     /**
@@ -41,12 +41,12 @@ class AddExpenseController extends Controller
          //validation
         $request->validate([
             
-            'date' => 'required',
+            
             'amount' => 'required',
             'note' => 'required',
             'user_id' => 'required',
             'expense_category_id' => 'required',
-            'custom_category_id' => 'required'
+            
              
         ]);
 
@@ -54,12 +54,11 @@ class AddExpenseController extends Controller
 
         // store data
         $expense_Record = new Expense_Record;
-        $expense_Record->date = $request->date;
+       
         $expense_Record->amount = $request->amount;
         $expense_Record->note = $request->note;
         $expense_Record->user_id = $request->user_id;
         $expense_Record->expense_category_id = $request->expense_category_id;
-        $expense_Record->custom_category_id = $request->custom_category_id;
         $expense_Record->save();
 
         // redirect
