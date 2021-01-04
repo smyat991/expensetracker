@@ -17,7 +17,6 @@
                     <th>#</th>
                     <th>Amount</th>
                     <th>Note</th>
-                    <th>User_id</th>
                     <th>Expense_category_id</th>
                     <th>Action</th>
                   </tr>
@@ -29,7 +28,6 @@
                     <td>{{$i++}}</td> 
                     <th>{{$expense_Record->amount}}</th>
                     <th>{{$expense_Record->note}}</th>
-                    <th>{{$expense_Record->user_id}}</th>
                     <th>{{$expense_Record->expense_category->category_name}}</th> <!--use relationname-->
                     <th>
                       <a href="{{route('expense_list.edit',$expense_Record->id)}}" class="btn btn-warning btn-sm">Edit</a>

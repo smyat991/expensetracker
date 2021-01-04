@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Expense_Record;
 use App\Expense_Category;
 use Illuminate\Http\Request;
+use Auth;
 
 class AddExpenseController extends Controller
 {
@@ -44,7 +45,6 @@ class AddExpenseController extends Controller
             
             'amount' => 'required',
             'note' => 'required',
-            'user_id' => 'required',
             'expense_category_id' => 'required',
             
              
@@ -54,10 +54,10 @@ class AddExpenseController extends Controller
 
         // store data
         $expense_Record = new Expense_Record;
-       
+        
         $expense_Record->amount = $request->amount;
         $expense_Record->note = $request->note;
-        $expense_Record->user_id = $request->user_id;
+        $expense_Record->user_id = Auth::id();
         $expense_Record->expense_category_id = $request->expense_category_id;
         $expense_Record->save();
 

@@ -26,7 +26,8 @@ class AddIncomeController extends Controller
      */
     public function create()
     {
-        //
+        $income_Categories=Income_Category::all();
+        return view('frontend.income.add_income',compact('income_Categories'));
     }
 
     /**
