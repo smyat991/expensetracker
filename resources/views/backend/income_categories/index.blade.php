@@ -37,14 +37,14 @@
                 </thead>
                 <tbody>
                   @php $i=1; @endphp
-                  @foreach($income_categories as $income_category)
+                  @foreach($income_Categories as $income_Category)
                   <tr>
                     <td>{{$i++}}</td>
-                    <th>{{$income_category->category_name}}</th>
+                    <th>{{$income_Category->category_name}}</th>
                     <th>
-                      <a href="{{route('income_categories.edit',$income_category->id)}}" class="btn btn-warning btn-sm">Edit</a>
+                      <a href="{{route('income_categories.edit',$income_Category->id)}}" class="btn btn-warning btn-sm">Edit</a>
                       
-                      <form method="post" action="{{route('income_categories.destroy',$income_category->id)}}" onsubmit="return confirm('Are you sure?')" class="d-inline-block">
+                      <form method="post" action="{{route('income_categories.destroy',$income_Category->id)}}" onsubmit="return confirm('Are you sure?')" class="d-inline-block">
                         @csrf
                         @method('DELETE')
                         <input type="submit" name="btnsubmit" class="btn btn-danger btn-sm" value="Delete">

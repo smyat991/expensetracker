@@ -14,8 +14,8 @@ class IncomeCategoriesController extends Controller
      */
     public function index()
     {
-        $income_categories=Income_Category::all();
-        return view('backend.income_categories.index',compact('income_categories'));
+        $income_Categories=Income_Category::all();
+        return view('backend.income_categories.index',compact('income_Categories'));
     }
 
     /**
@@ -25,7 +25,7 @@ class IncomeCategoriesController extends Controller
      */
     public function create()
     {
-        return view('backend.income_categories.income_create');
+        return view('backend.income_categories.create');
     }
 
     /**
@@ -47,9 +47,9 @@ class IncomeCategoriesController extends Controller
        
 
         // store data
-        $income_category = new Income_Category;
-        $income_category->category_name = $request->category_name;
-        $income_category->save();
+        $income_Category = new Income_Category;
+        $income_Category->category_name = $request->category_name;
+        $income_Category->save();
 
         // redirect
         return redirect()->route('income_categories.index');
@@ -76,7 +76,7 @@ class IncomeCategoriesController extends Controller
      */
     public function edit(Income_Category $income_Category)
     {
-        //
+        return view('backend.income_categories.edit',compact('income_Category'));
     }
 
     /**

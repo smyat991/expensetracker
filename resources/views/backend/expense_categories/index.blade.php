@@ -26,7 +26,7 @@
         <div class="tile">
           <div class="tile-body">
             <h3 class="d-inline-block">Expense Categories List</h3>
-            <!-- <a href="{{route('expense_categories.create')}}" class="btn btn-success float-right">Add New</a> -->
+            
 
             <div class="table-responsive mt-3">
               <table class="table table-bordered">
@@ -39,18 +39,18 @@
                 </thead>
                 <tbody>
                   @php $i=1; @endphp
-                  @foreach($expense_categories as $expense_category)
+                  @foreach($expense_Categories as $expense_Category)
                   <tr>
                     <td>{{$i++}}</td>
-                    <th>{{$expense_category->category_name}}</th>
+                    <th>{{$expense_Category->category_name}}</th>
                     <th>
-                      <a href="{{route('expense_categories.edit',$expense_category->id)}}" class="btn btn-warning btn-sm">Edit</a>
-                    	
-                    	<form method="post" action="{{route('expense_categories.destroy',$expense_category->id)}}" onsubmit="return confirm('Are you sure?')" class="d-inline-block">
+                      <a href="{{route('expense_categories.edit',$expense_Category->id)}}" class="btn btn-warning btn-sm">Edit</a>
+                     <form method="post" action="{{route('expense_categories.destroy',$expense_Category->id)}}" onsubmit="return confirm('Are you sure?')" class="d-inline-block">
                         @csrf
                         @method('DELETE')
                         <input type="submit" name="btnsubmit" class="btn btn-danger btn-sm" value="Delete">
-                      </form>
+                      </form> 
+
                     </th>
                   </tr>
                   @endforeach

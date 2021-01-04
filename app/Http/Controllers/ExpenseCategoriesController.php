@@ -14,8 +14,8 @@ class ExpenseCategoriesController extends Controller
      */
     public function index()
     {
-        $expense_categories=Expense_Category::all();
-        return view('backend.expense_categories.index',compact('expense_categories'));
+        $expense_Categories=Expense_Category::all();
+        return view('backend.expense_categories.index',compact('expense_Categories'));
     }
 
     /**
@@ -25,7 +25,7 @@ class ExpenseCategoriesController extends Controller
      */
     public function create()
     {
-        return view('backend.expense_categories.expense_create');
+        return view('backend.expense_categories.create');
     }
 
     /**
@@ -48,9 +48,9 @@ class ExpenseCategoriesController extends Controller
        
 
         // store data
-        $expense_category = new Expense_Category;
-        $expense_category->category_name = $request->category_name;
-        $expense_category->save();
+        $expense_Category = new Expense_Category;
+        $expense_Category->category_name = $request->category_name;
+        $expense_Category->save();
 
         // redirect
         return redirect()->route('expense_categories.index');
@@ -76,7 +76,7 @@ class ExpenseCategoriesController extends Controller
      */
     public function edit(Expense_Category $expense_Category)
     {
-        return view('backend.expense_categories.expense_edit',compact('expense_Category'));
+        return view('backend.expense_categories.edit',compact('expense_Category'));
     }
 
     /**
@@ -88,13 +88,13 @@ class ExpenseCategoriesController extends Controller
      */
     public function update(Request $request, Expense_Category $expense_Category)
     {
-        $request->validate([
-            'category_name' => 'required'
+         $request->validate([
+            'category_name' => 'required',
              
         ]);
 
        
-        //dd($request);
+
         // store data
        
         $expense_Category->category_name = $request->category_name;
@@ -114,7 +114,7 @@ class ExpenseCategoriesController extends Controller
     {
         
          $expense_Category->delete();
-        // delete old image
+       
 
         // redirect
         return redirect()->route('expense_categories.index');

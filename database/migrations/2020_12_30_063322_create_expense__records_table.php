@@ -27,6 +27,7 @@ class CreateExpenseRecordsTable extends Migration
             $table-> unsignedBigInteger('custom_category_id');
             $table-> foreign('custom_category_id')-> references('id')-> on('custom__categories')-> onDelete('cascade');
             $table->timestamps();
+            
         });
     }
 
