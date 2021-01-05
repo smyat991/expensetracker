@@ -40,10 +40,12 @@ class AddExpenseController extends Controller
      */
     public function store(Request $request)
     {
+        //dd($request);
          //validation
         $request->validate([
             
-            
+
+            'expense_date' => 'required',
             'amount' => 'required',
             'note' => 'required',
             'expense_category_id' => 'required',
@@ -55,7 +57,7 @@ class AddExpenseController extends Controller
 
         // store data
         $expense_Record = new Expense_Record;
-        $expense_Record->date=date('Y-m-d');
+        $expense_Record->date=$request->expense_date;
         $expense_Record->amount = $request->amount;
         $expense_Record->note = $request->note;
         $expense_Record->user_id = Auth::id();

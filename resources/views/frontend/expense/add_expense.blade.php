@@ -40,10 +40,10 @@ border-radius: 100px;
                       <label for="note">Note:</label>
                       <textarea class="form-control" name="note" id="note" cols="40" rows="5" placeholder="Description..."></textarea>
                  </div>
-                   {{-- <div class="form-group ">
-                      <label for="amount">User_id:</label>
-                      <input type="number" class="form-control" name="user_id"  id="user_id" value="">
-                    </div> --}}
+                  <div class="col-md-4">
+                    <label for="note">Date:</label>
+                     <input type="date" id="expense_date" name="expense_date" value="anything you like" >
+                  </div>
                     <div class="col-md-4">
                     <div class="form-group">
                       <label for="brandidInput">Expense Category</label>

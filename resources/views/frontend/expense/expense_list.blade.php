@@ -29,6 +29,9 @@
                         Amount
                       </th>
                       <th>
+                        Date
+                      </th>
+                      <th>
                         Note
                       </th>
                       <th>
@@ -71,6 +74,7 @@
                   <tr>
                     <td>{{$i++}}</td> 
                     <th>{{$expense_Record->amount}}</th>
+                    <th>{{$expense_Record->date}}</th>
                     <th>{{$expense_Record->note}}</th>
                     <th>{{$expense_Record->expense_category->category_name}}</th> <!--use relationname-->
                     <th>
