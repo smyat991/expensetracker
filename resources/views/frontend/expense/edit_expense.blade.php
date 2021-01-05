@@ -9,7 +9,7 @@
             <h4 class="card-title">Add Expense</h4>
           </div>  
             
-            <form method="post" action="" enctype="multipart/form-data" class="mt-3">
+            <form method="post" action="{{route('expense_list.update',$expense_Record->id)}}" enctype="multipart/form-data" class="mt-3">
               @csrf
               @method('PUT')
               <div class="form-group">

@@ -7,14 +7,15 @@
       <div class="col-md-12">
         <div class="tile">
           <div class="tile-body">
-            <h5 class="d-inline-block my-5">Your Income List</h5>
+            <h5 class="d-inline-block my-5">Your Custom Category List</h5>
             
 
             <div class="col-md-12">
             <div class="card">
               <div class="card-header">
-                <h4 class="card-title"> Income Table
-                  <a href="{{route('income_list.create')}}"><button type="button" class="btn btn-success btn-round"><i class="nc-icon nc-simple-add">Add</i></button></h4></a>
+                <h4 class="card-title"> Custom Table
+                 <a href="{{route('custom_list.create')}}"><button type="button" class="btn btn-success btn-round"><i class="nc-icon nc-simple-add">Add</i></button></h4></a> 
+                  
 
               </div>
               <div class="card-body">
@@ -25,13 +26,7 @@
                         ID
                       </th>
                       <th>
-                        Amount
-                      </th>
-                      <th>
-                        Note
-                      </th>
-                      <th>
-                        Expense_Category_ID
+                        Name
                       </th>
                       <th class="align-right">
                         Action
@@ -66,14 +61,12 @@
               </div>
             </div>
                   @php $i=1; @endphp
-                  @foreach($income_Records as $income_Record)
+                  @foreach($custom_Categories as $custom_Category)
                   <tr>
-                    <td>{{$i++}}</td> 
-                    <th>{{$income_Record->amount}}</th>
-                    <th>{{$income_Record->note}}</th>
-                    <th>{{$income_Record->income_category->category_name}}</th> <!--use relationname-->
+                    <th>{{$i++}}</th> 
+                    <th>{{$custom_Category->category_name}}</th>
                     <th>
-                      <a href="{{route('income_list.edit',$income_Record->id)}}" class="btn btn-warning btn-round">Edit</a>
+                      <a href="" class="btn btn-warning btn-round">Edit</a>
                        <form method="post" action="" onsubmit="return confirm('Are you sure?')" class="d-inline-block">
                         @csrf
                         @method('DELETE')

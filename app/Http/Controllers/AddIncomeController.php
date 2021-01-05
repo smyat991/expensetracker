@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Income_Record;
 use App\Income_Category;
 use Illuminate\Http\Request;
+use Auth;
 
 class AddIncomeController extends Controller
 {
@@ -38,7 +39,30 @@ class AddIncomeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            
+            
+            'amount' => 'required',
+            'note' => 'required',
+            'income_category_id' => 'required',
+            
+             
+        ]);
+
+       
+
+        // store data
+        $income_Record = new Income_Record;
+       /* $income_Record->date=date('Y-m-d');*/
+        $income_Record->amount = $request->amount;
+        $income_Record->note = $request->note;
+        $income_Record->user_id = Auth::id();
+        $income_Record->income_category_id = $request->income_category_id;
+        $income_Record->save();
+
+        // redirect
+        return redirect()->route('expense_list.index');
+
     }
 
     /**

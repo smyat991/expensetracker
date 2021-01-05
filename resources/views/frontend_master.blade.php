@@ -52,13 +52,13 @@
             </a>
           </li>
           <li>
-            <a href="./icons.html">
+            <a href="{{route('expense_list.index')}}">
               <i class="nc-icon nc-money-coins" style="color:white;"></i>
               <p style="color:white;">Expense Record</p>
             </a>
           </li>
           <li>
-            <a href="./map.html">
+            <a href="{{route('income_list.index')}}">
               <i class="nc-icon nc-money-coins" style="color:#ffffff;"></i>
               <p style="color:#ffffff;">Income Record</p>
             </a>
@@ -66,7 +66,7 @@
           
 
           <li>
-            <a href="./tables.html">
+            <a href="{{route('custom_list.index')}}">
               <i class="nc-icon nc-tile-56" style="color:white;"></i>
               <p style="color:white;">Custom Category</p>
             </a>

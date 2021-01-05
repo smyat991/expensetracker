@@ -24,7 +24,7 @@ border-radius: 100px;
             <div class="card">
               <div class="card-header heading-image">
               </div>
-              <h4 class="card-title"> Expense Table</h4>
+              <h4 class="card-title"> Add Expense </h4>
 
               <div class="card-body">
               
@@ -33,7 +33,7 @@ border-radius: 100px;
                     <div class="col-md-4">
                     <div class="form-group">
                       <label for="amount">Amount:</label>
-                      <input type="number" class="form-control" name="amount"  id="amount" value="">
+                      <input type="number" class="form-control" name="amount"  id="amount"  value="" >
                     </div>
                   </div>
                   <div class="col-md-4">

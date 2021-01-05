@@ -16,7 +16,8 @@ class AddExpenseController extends Controller
      */
     public function index()
     { 
-        $expense_Records=Expense_Record::all();
+        $user = Auth::user();
+        $expense_Records=Expense_Record::where('user_id', '=', Auth::user()->id)->get();;
         return view('frontend.expense.expense_list',compact('expense_Records'));
     }
 
@@ -54,7 +55,7 @@ class AddExpenseController extends Controller
 
         // store data
         $expense_Record = new Expense_Record;
-        
+        $expense_Record->date=date('Y-m-d');
         $expense_Record->amount = $request->amount;
         $expense_Record->note = $request->note;
         $expense_Record->user_id = Auth::id();
@@ -86,7 +87,7 @@ class AddExpenseController extends Controller
     public function edit(Expense_Record $expense_Record)
     {
         $expense_Categories=Expense_Category::all();
-        return view('frontend.expense.editexpense',compact('expense_Record','expense_Categories'));
+        return view('frontend.expense.edit_expense',compact('expense_Record','expense_Categories'));
     }
 
     /**
@@ -109,6 +110,10 @@ class AddExpenseController extends Controller
      */
     public function destroy(Expense_Record $expense_Record)
     {
-        //
+        
+       
+
+        // redirect
+        
     }
 }

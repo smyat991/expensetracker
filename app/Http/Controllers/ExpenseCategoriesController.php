@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Expense_Category;
 use Illuminate\Http\Request;
 
+
 class ExpenseCategoriesController extends Controller
 {
     /**
@@ -14,6 +15,7 @@ class ExpenseCategoriesController extends Controller
      */
     public function index()
     {
+        
         $expense_Categories=Expense_Category::all();
         return view('backend.expense_categories.index',compact('expense_Categories'));
     }
@@ -74,9 +76,11 @@ class ExpenseCategoriesController extends Controller
      * @param  \App\Expense_Category  $expense_Category
      * @return \Illuminate\Http\Response
      */
-    public function edit(Expense_Category $expense_Category)
+    public function edit(Expense_Category $expense_Category,$id)
     {
-        return view('backend.expense_categories.edit',compact('expense_Category'));
+        $expense_category=Expense_Category::find($id);
+        //dd($expense_category->id);
+        return view('backend.expense_categories.edit',compact('expense_category'));
     }
 
     /**
@@ -86,7 +90,7 @@ class ExpenseCategoriesController extends Controller
      * @param  \App\Expense_Category  $expense_Category
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Expense_Category $expense_Category)
+    public function update(Request $request,$id)
     {
          $request->validate([
             'category_name' => 'required',
@@ -96,7 +100,7 @@ class ExpenseCategoriesController extends Controller
        
 
         // store data
-       
+        $expense_Category=Expense_Category::find($id);
         $expense_Category->category_name = $request->category_name;
         $expense_Category->save();
 
@@ -110,10 +114,10 @@ class ExpenseCategoriesController extends Controller
      * @param  \App\Expense_Category  $expense_Category
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Expense_Category $expense_Category)
+    public function destroy(Expense_Category $expense_Category,$id)
     {
-        
-         $expense_Category->delete();
+        $expense_category=Expense_Category::find($id);
+        $expense_category->delete();
        
 
         // redirect

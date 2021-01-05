@@ -15,7 +15,7 @@ class CreateExpenseRecordsTable extends Migration
     {
         Schema::create('expense__records', function (Blueprint $table) {
             $table->id();
-            
+            $table->date('date');
             $table-> integer('amount');
             $table-> text('note');
 

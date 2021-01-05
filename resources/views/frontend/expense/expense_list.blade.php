@@ -14,7 +14,8 @@
             <div class="card">
               <div class="card-header">
                 <h4 class="card-title"> Expense Table
-                  <button type="button" class="btn btn-success btn-round"><i class="nc-icon nc-simple-add">Add</i></button></h4>
+                  <a href="{{route('expense_list.create')}}"><button type="button" class="btn btn-success btn-round"><i class="nc-icon nc-simple-add">Add</i></button></h4></a>
+                  
 
               </div>
               <div class="card-body">
