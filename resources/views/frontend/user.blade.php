@@ -4,7 +4,7 @@
 
 
 
-      <div class="content">
+      <div class="content bg-gradient-info">
         <div class="row">
           <div class="col-md-4">
             <div class="card card-user">
@@ -108,7 +108,7 @@
 
             <!-- Profile Information Displayed Here -->
           </div>
-          <div class="col-md-8">
+          <div class="col-md-8 ">
             <div class="card card-user">
               <div class="card-header">
                 <h5 class="card-title">Edit Profile</h5>
@@ -192,6 +192,12 @@
                       <button type="submit" class="btn btn-primary btn-round">Update Profile</button>
                       <!-- Sql with button event -->
                     </div>
+                    <div class="update ml-auto mr-auto">
+
+                        <button type="submit" class="btn btn-danger btn-round">Cancel</button>
+                        <!-- Sql with button event -->
+                      </div>
+
                   </div>
                 </form>
               </div>

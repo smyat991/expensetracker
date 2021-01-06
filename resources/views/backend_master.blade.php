@@ -171,7 +171,7 @@
                                 <span class="hide-menu">Blank Page</span>
                             </a>
                         </li>
-                        
+
                         <li class="text-center p-20 upgrade-btn">
                             <a href="https://www.wrappixel.com/templates/ampleadmin/"
                                 class="btn btn-block btn-danger text-white" target="_blank">
@@ -201,7 +201,7 @@
             <!-- ============================================================== -->
             <!-- Container fluid  -->
             <!-- ============================================================== -->
-           
+
             @yield('content')
             <!-- ============================================================== -->
             <!-- End Container fluid  -->
