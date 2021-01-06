@@ -9,36 +9,25 @@
             <h4 class="card-title">Add Expense</h4>
           </div>  
             
-            <form method="post" action="{{route('expense_list.update',$expense_Record->id)}}" enctype="multipart/form-data" class="mt-3">
+            <form method="post" action="{{route('expense_list.update',$expense_record->id)}}" enctype="multipart/form-data" class="mt-3">
               @csrf
               @method('PUT')
               <div class="form-group">
                 <label for="amount">Amount:</label>
-                <input type="number" class="form-control" name="amount"  id="amount" value="{{$expense_Record->amount}}">
-                
+                <input type="number" class="form-control" name="amount"  id="amount" value="{{$expense_record->amount}}">
               </div>
               <div> 
               	<label for="note">Note:</label>
-              	<textarea class="form-control" name="note" id="note" cols="40" rows="5" placeholder="Description..."></textarea>
+              	<textarea class="form-control" name="note" id="note" cols="40" rows="5" placeholder="Description..." value="{{$expense_record->note}}"></textarea>
           	 </div>
-             <div class="form-group">
-                <label for="amount">User_id:</label>
-                <input type="number" class="form-control" name="user_id"  id="user_id" value="">
-              </div>
               <div class="form-group">
                 <label for="brandidInput">Expense Category</label>
-                
                 <select name="expense_category_id" id="expense_category_id" class="form-control">
                   @foreach($expense_Categories as $expense_Category)
-                  <option value="{{$expense_Category->category_name}}"> {{$expense_Category->category_name}}</option>
+                  <option value=""> {{$expense_Category->category_name}}</option>
                    @endforeach
                 </select>
               </div> 
-              <div class="form-group">
-                <label for="amount">Custom Category:</label>
-                <input type="number" class="form-control" name="custom_category_id"  id="custom_category_id" value="">
-              </div>
-              
               <div class="form-group">
                   <input type="submit" name="btn-submit" value="Save" class="btn btn-primary">
               </div>

@@ -23,7 +23,10 @@
                   <div class="col-7 col-md-8">
                     <div class="numbers">
                       <p class="card-category">Income</p>
-                      <p class="card-title">SQL Here<p>
+                      <p class="card-title">
+                        
+
+                      <p>
                     </div>
                   </div>
                 </div>
@@ -52,7 +55,9 @@
                   <div class="col-7 col-md-8">
                     <div class="numbers">
                       <p class="card-category">Expense</p>
-                      <p class="card-title">SQL Here<p>
+                      <p class="card-title">
+                       {{-- {{$total}} --}}
+                      </p><!--total expense-->
                     </div>
                   </div>
                 </div>

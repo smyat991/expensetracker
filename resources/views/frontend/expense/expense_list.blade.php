@@ -14,17 +14,27 @@
             <div class="card">
               <div class="card-header">
                 <h4 class="card-title"> Expense Table
-                  <a href="{{route('expense_list.create')}}"><button type="button" class="btn btn-success btn-round"><i class="nc-icon nc-simple-add">Add</i></button></h4></a>
+                  <a href="{{route('expense_list.create')}}"><button type="button" class="btn btn-success btn-round"><i class="nc-icon nc-simple-add">Add</i></button></h4>
+                  </a>
+
+                    <label for="filterdate">Date:</label>
+                     <input type="date" id="filterdate" name="filterdate">
+                  
                   
 
               </div>
               <div class="card-body">
                 <div class="table-responsive">
-                  <table class="table">
+
+                  <table class="table" id="searchlisttable">
+                    
+                  </table>
+                  <table class="table" id="listtable">
                     <thead class=" text-primary">
                       <th>
                         ID
                       </th>
+                      
                       <th>
                         Amount
                       </th>
@@ -41,6 +51,7 @@
                         Action
                       </th>
                     </thead>
+
 <!--                     <tbody>
                       <tr>
                         <td>
@@ -73,6 +84,7 @@
                   @foreach($expense_Records as $expense_Record)
                   <tr>
                     <td>{{$i++}}</td> 
+                    
                     <th>{{$expense_Record->amount}}</th>
                     <th>{{$expense_Record->date}}</th>
                     <th>{{$expense_Record->note}}</th>

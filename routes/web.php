@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 
 
 //backend
-Route::middleware('role:admin')->group(function() {
+Route::middleware('auth')->group(function() {
 Route::get('dashboard','BackendController@dashboard')->name('dashboardpage');
 
 Route::resource('expense_categories','ExpenseCategoriesController');
@@ -29,9 +29,9 @@ Route::resource('income_categories','IncomeCategoriesController');
 
 
 //frontend
-/*Route::get('home1', 'FrontendController@home1')->name('home1');
+Route::get('home1', 'FrontendController@home1')->name('home1');
 
-Route::get('user','FrontendController@user')->name('user');
+/**Route::get('user','FrontendController@user')->name('user');
 
 Route:: get('addCustomCategory', 'FrontendController@addCustomCategory')->name('addCustomCategory');
 
@@ -49,11 +49,11 @@ Route::get('incomeTable', 'FrontendController@incomeTable')->name('incomeTable')
 //addexpense
 Route::resource('expense_list','AddExpenseController');
 
+Route::post('expense_filter','AddExpenseController@expense_filter');
+
 //addincome
 Route::resource('income_list','AddIncomeController');
 
-//addcustom
-Route::resource('custom_list','AddCustomController');
 
 //authentication
 Auth::routes(['verify' => true]);

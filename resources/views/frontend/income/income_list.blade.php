@@ -16,6 +16,9 @@
                 <h4 class="card-title"> Income Table
                   <a href="{{route('income_list.create')}}"><button type="button" class="btn btn-success btn-round"><i class="nc-icon nc-simple-add">Add</i></button></h4></a>
 
+                  <label for="filterdate">Date:</label>
+                  <input type="date" id="filterdate" name="filterdate">
+
               </div>
               <div class="card-body">
                 <div class="table-responsive">

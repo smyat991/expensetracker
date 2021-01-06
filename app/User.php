@@ -20,6 +20,11 @@ class User extends Authenticatable implements MustVerifyEmail
         'name', 'email', 'password', 
     ];
 
+     public function expense_records()
+    {
+        return $this->hasmany('App\Expense_Record');
+    }
+
     /**
      * The attributes that should be hidden for arrays.
      *

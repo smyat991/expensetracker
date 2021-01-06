@@ -10,6 +10,7 @@
      Expense Tracker
     </title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <!--     Fonts and icons     -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
@@ -39,7 +40,7 @@
       <div class="sidebar-wrapper">
         <ul class="nav">
           <li class="active">
-            <a href="./home.html">
+            <a href="{{route('home1')}}">
               <i class="nc-icon nc-bank" style="color:white;"></i>
               <p style="color:white;">Home</p>
             </a>
@@ -61,14 +62,6 @@
             <a href="{{route('income_list.index')}}">
               <i class="nc-icon nc-money-coins" style="color:#ffffff;"></i>
               <p style="color:#ffffff;">Income Record</p>
-            </a>
-          </li>
-          
-
-          <li>
-            <a href="{{route('custom_list.index')}}">
-              <i class="nc-icon nc-tile-56" style="color:white;"></i>
-              <p style="color:white;">Custom Category</p>
             </a>
           </li>
           <li>
@@ -191,6 +184,7 @@
 <!--   <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script> -->
   <!-- Chart JS -->
   <script src="{{ asset('frontend_assets/js/plugins/chartjs.min.js')}}"></script>
+  <script src="{{ asset('frontend_assets/js/filterexpense.js')}}"></script>
   <!--  Notifications Plugin    -->
   <script src="{{ asset('frontend_assets/js/plugins/bootstrap-notify.js')}}"></script>
   <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->

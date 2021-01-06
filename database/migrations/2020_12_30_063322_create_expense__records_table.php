@@ -17,6 +17,7 @@ class CreateExpenseRecordsTable extends Migration
             $table->id();
             $table->date('date');
             $table-> integer('amount');
+            
             $table-> text('note');
 
             $table-> unsignedBigInteger('user_id');
