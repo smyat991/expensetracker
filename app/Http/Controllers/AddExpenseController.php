@@ -19,6 +19,16 @@ class AddExpenseController extends Controller
         $user = Auth::user();
         $expense_Records=Expense_Record::where('user_id', '=', Auth::user()->id)->get();;
         return view('frontend.expense.expense_list',compact('expense_Records'));
+
+
+        // $price = DB::table('orders')
+        //         ->where('finalized', 1)
+        //         ->avg('price');
+
+
+        $total = DB:: table('expense_records')
+                -> where('date', created_at)
+                -> sum('amount');
     }
 
     /**
