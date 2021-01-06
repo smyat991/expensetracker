@@ -6,13 +6,36 @@
 
 
       <!-- Content Start Here -->
-      <div class="content">
+      <div class="content bg-info">
+        <!--
+        <div class = "col-lg-5" wfd-id = "398">
+            <div class = "mb-5 mt-11" wfd-id = "399">
+                <h1 class = "display-4 mb-3">
+                    "
+                        Turn your ideas into a
+                    "
+                    <span class = "text-primary text-highlight-warning" wfd-id = "400">
+                        <span class = "js-text-animation" data-hs-typed-options = "{
+                            'strings': ['startup.','future.','success.'],
+
+                            'typeSpeed': 90,
+                            'loop' : true,
+                            'backSpeed': 30,
+                            'backDelay' : 2500
+                        }" wfd-id = "402"></span>
+                        <span class = "typed-cursor typed-cursor--blink" wfd-id = "401">|</span>
+                    </span>
+                </h1>
+            </div>
+
+        </div>
+        -->
         <div class="row">
 
           <!-- Cards -->
           <div class="col-lg-6 col-md-6 col-sm-6">
             <div class="card card-stats">
-              <div class="card-body ">
+              <div class="card-body">
                 <div class="row">
                   <div class="col-5 col-md-4">
                     <div class="icon-big text-center icon-warning">
@@ -20,7 +43,7 @@
                       <i class="nc-icon nc-minimal-up text-success"></i>
                     </div>
                   </div>
-                  <div class="col-7 col-md-8">
+                  <div class="col-7 col-md-8 ">
                     <div class="numbers">
                       <p class="card-category">Income</p>
                       <p class="card-title">

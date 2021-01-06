@@ -51,7 +51,7 @@
               <p>Expense Record</p>
             </a>
           </li>
-          
+
           <li>
             <a href="./tables.html">
               <i class="nc-icon nc-tile-56"></i>
@@ -146,7 +146,7 @@
         </div>
       </nav>
       <!-- End Navbar -->
-      <div class="content">
+      <div class="content bg-info">
         <div class="row">
 
           <div class="col-md-12">

@@ -59,11 +59,22 @@
             </a>
           </li>
           <li>
-            <a href="{{route('income_list.index')}}">
+            <a href="">
               <i class="nc-icon nc-money-coins" style="color:#ffffff;"></i>
               <p style="color:#ffffff;">Income Record</p>
             </a>
           </li>
+<<<<<<< HEAD
+=======
+
+
+          <li>
+            <a href="">
+              <i class="nc-icon nc-tile-56" style="color:white;"></i>
+              <p style="color:white;">Custom Category</p>
+            </a>
+          </li>
+>>>>>>> cab87dd40f5251bb56f02009080fb76fee2b6b93
           <li>
             <a href="./typography.html">
               <i class="nc-icon nc-button-power" style="color:white;"></i>
@@ -82,7 +93,7 @@
     <div class="main-panel">
       <!-- Navbar -->
       <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent">
-        <div class="container-fluid">
+        <div class="container-fluid bg-secondary">
           <div class="navbar-wrapper">
             <div class="navbar-toggle">
               <button type="button" class="navbar-toggler">
@@ -91,7 +102,32 @@
                 <span class="navbar-toggler-bar bar3"></span>
               </button>
             </div>
-            <a class="navbar-brand" href="javascript:;">Expense Tracker</a>
+            <a class="navbar-brand " data-toggle="modal" data-target="#aboutModal" href="javascript:;">Expense Tracker</a>
+
+
+            <div class = "modal fade" id = "aboutModal" role = "dialog" tabindex="-1">
+                <div class = "modal-dialog">
+                    <div class = "modal-content">
+                        <div class = "modal-header">
+                            <div class = "modal-title">About Us</div>
+                        </div>
+                        <div class = "modal-body text-center">
+
+                            <p>
+                                <i class = "fas fa-envelope"></i>
+                                <i class = "fas fa-camera"></i>
+                                <i class = "fab fa-facebook-square"></i>
+                                <i class = "fab fa-twitter-square"></i>
+                                <i class = "fab fa-google-plue-square"></i>
+                            </p>
+                        </div>
+                        <div class = "modal-footer">
+                            <button class = "btn btn-secondary" data-dismiss="modal">Exit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-bar navbar-kebab"></span>
@@ -145,7 +181,7 @@
         </div>
       </nav>
       <!-- End Navbar -->
-  
+
 
   @yield('content')
 
@@ -179,7 +215,7 @@
   <script src="{{ asset('frontend_assets/js/core/bootstrap.min.js')}}"></script>
 
   <script src="{{ asset('frontend_assets/js/plugins/perfect-scrollbar.jquery.min.js')}}"></script>
-  
+
   <!--  Google Maps Plugin    -->
 <!--   <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script> -->
   <!-- Chart JS -->
