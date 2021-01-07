@@ -22,7 +22,6 @@ class AddExpenseController extends Controller
 
        
         $user = Auth::user();
-<<<<<<< HEAD
         $expense_Records=Expense_Record::where('user_id', '=', Auth::user()->id)->where('date','=',date('Y-m-d'))->get(); //show data with current date
 
       
@@ -35,7 +34,6 @@ class AddExpenseController extends Controller
        /* ->groupby(month('date'))*/
         ->sum('amount');
 
-        //dd($total);
 
        
         /*$total=DB::select('select year(date) as year, month(date) as month, sum(amount) as total_amount from expense__records group by year(date), month(date)');*/
@@ -51,7 +49,6 @@ class AddExpenseController extends Controller
 
         
 
-=======
         $expense_Records=Expense_Record::where('user_id', '=', Auth::user()->id)->get();;
         return view('frontend.expense.expense_list',compact('expense_Records'));
 
@@ -64,7 +61,6 @@ class AddExpenseController extends Controller
         $total = DB:: table('expense_records')
                 -> where('date', created_at)
                 -> sum('amount');
->>>>>>> cab87dd40f5251bb56f02009080fb76fee2b6b93
     }
 
     /**
@@ -195,9 +191,10 @@ class AddExpenseController extends Controller
     {
 
        $expense_filter  = $request->filter_date;
-       $expense_records=Expense_Record::where('date', '=', $expense_filter)->get();
+       $expense_records=Expense_Record::where('date', '=', $expense_filter)
+       ->where('user_id', '=', Auth::id())->get();
 
-        //dd($expense_records);
+        // dd($expense_records);
         /*return response()
             ->json(['expense_records' => $expense_records , 'expense_filter' => $expense_filter]);*/
 

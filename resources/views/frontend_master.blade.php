@@ -64,8 +64,6 @@
               <p style="color:#ffffff;">Income Record</p>
             </a>
           </li>
-<<<<<<< HEAD
-=======
 
 
           <li>
@@ -74,7 +72,7 @@
               <p style="color:white;">Custom Category</p>
             </a>
           </li>
->>>>>>> cab87dd40f5251bb56f02009080fb76fee2b6b93
+          
           <li>
             <a href="./typography.html">
               <i class="nc-icon nc-button-power" style="color:white;"></i>
