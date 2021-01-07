@@ -94,7 +94,7 @@
                        <form method="post" action="" onsubmit="return confirm('Are you sure?')" class="d-inline-block">
                         @csrf
                         @method('DELETE')
-                        <input type="submit" name="btnsubmit" class="btn btn-warning btn-round" value="Delete">
+                        <input type="submit" name="btnsubmit" class="btn btn-danger btn-round" value="Delete">
                       </form> 
                     </th>
                   </tr>
