@@ -15,6 +15,7 @@ class CreateIncomeRecordsTable extends Migration
     {
         Schema::create('income__records', function (Blueprint $table) {
             $table->id();
+            $table->date('date');
             $table-> integer('amount');
             $table-> text('note');
 

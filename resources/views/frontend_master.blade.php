@@ -47,7 +47,7 @@
           </li>
 
           <li>
-            <a href="./user.html">
+            <a href="{{ route('useredit')}}">
               <i class="nc-icon nc-single-02" style="color:white;"></i>
               <p style="color:white;">User Profile</p>
             </a>
@@ -59,22 +59,22 @@
             </a>
           </li>
           <li>
-            <a href="">
+            <a href="{{route('income_list.index')}}">
               <i class="nc-icon nc-money-coins" style="color:#ffffff;"></i>
               <p style="color:#ffffff;">Income Record</p>
             </a>
           </li>
 
 
-          <li>
+<!--           <li>
             <a href="">
               <i class="nc-icon nc-tile-56" style="color:white;"></i>
               <p style="color:white;">Custom Category</p>
             </a>
-          </li>
+          </li> -->
           
           <li>
-            <a href="./typography.html">
+            <a href="{{ url('/logout')}}">
               <i class="nc-icon nc-button-power" style="color:white;"></i>
               <p style="color:white;">Logout</p>
             </a>
@@ -91,7 +91,7 @@
     <div class="main-panel">
       <!-- Navbar -->
       <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent">
-        <div class="container-fluid bg-secondary">
+        <div class="container-fluid">
           <div class="navbar-wrapper">
             <div class="navbar-toggle">
               <button type="button" class="navbar-toggler">
@@ -100,33 +100,10 @@
                 <span class="navbar-toggler-bar bar3"></span>
               </button>
             </div>
-            <a class="navbar-brand " data-toggle="modal" data-target="#aboutModal" href="javascript:;">Expense Tracker</a>
+            <a class="navbar-brand">Expense Tracker</a>
+      </div> <!-- part of the navbar -->
 
 
-            <div class = "modal fade" id = "aboutModal" role = "dialog" tabindex="-1">
-                <div class = "modal-dialog">
-                    <div class = "modal-content">
-                        <div class = "modal-header">
-                            <div class = "modal-title">About Us</div>
-                        </div>
-                        <div class = "modal-body text-center">
-
-                            <p>
-                                <i class = "fas fa-envelope"></i>
-                                <i class = "fas fa-camera"></i>
-                                <i class = "fab fa-facebook-square"></i>
-                                <i class = "fab fa-twitter-square"></i>
-                                <i class = "fab fa-google-plue-square"></i>
-                            </p>
-                        </div>
-                        <div class = "modal-footer">
-                            <button class = "btn btn-secondary" data-dismiss="modal">Exit</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-          </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-bar navbar-kebab"></span>
             <span class="navbar-toggler-bar navbar-kebab"></span>
@@ -179,19 +156,21 @@
         </div>
       </nav>
       <!-- End Navbar -->
-
+<div class="content">
 
   @yield('content')
 
+</div>
 
-   <footer class="footer footer-black  footer-white ">
+
+   <!-- <footer class="footer footer-black  footer-white ">
         <div class="container-fluid">
           <div class="row">
             <nav class="footer-nav">
               <ul>
                 <li><a href="https://www.creative-tim.com" target="_blank">Log Out</a></li>
                 <li><a href="https://www.creative-tim.com/blog" target="_blank">Contact Us</a></li>
-                <!-- <li><a href="https://www.creative-tim.com/license" target="_blank">Licenses</a></li> -->
+                <li><a href="https://www.creative-tim.com/license" target="_blank">Licenses</a></li>
               </ul>
             </nav>
             <div class="credits ml-5">
@@ -201,9 +180,11 @@
             </div>
           </div>
         </div>
-      </footer>
-    </div>
+      </footer> -->
+
   </div>
+    </div>
+
 
   <!--   Core JS Files   -->
   <script src="{{ asset('frontend_assets/js/core/jquery.min.js')}}"></script>
@@ -229,5 +210,7 @@
       demo.initChartsPages();
     });
   </script> -->
+  @yield('script')
+
 </body>
 </html>

@@ -37,8 +37,10 @@ border-radius: 100px;
                     </div>
                   </div>
                   <div class="col-md-4">
+                  <div class="form-group">
                       <label for="note">Note:</label>
                       <textarea class="form-control" name="note" id="note" cols="40" rows="5" placeholder="Description..."></textarea>
+                  </div>
                  </div>
                   <div class="col-md-4">
                     <label for="note">Date:</label>

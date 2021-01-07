@@ -43,6 +43,7 @@ class AddIncomeController extends Controller
             
             
             'amount' => 'required',
+            'expense_date' => 'required',
             'note' => 'required',
             'income_category_id' => 'required',
             
@@ -55,13 +56,14 @@ class AddIncomeController extends Controller
         $income_Record = new Income_Record;
        /* $income_Record->date=date('Y-m-d');*/
         $income_Record->amount = $request->amount;
+        $income_Record->date = $request->expense_date;
         $income_Record->note = $request->note;
         $income_Record->user_id = Auth::id();
         $income_Record->income_category_id = $request->income_category_id;
         $income_Record->save();
 
         // redirect
-        return redirect()->route('expense_list.index');
+        return redirect()->route('income_list.index');
 
     }
 
@@ -73,7 +75,7 @@ class AddIncomeController extends Controller
      */
     public function show(Income_Record $income_Record)
     {
-        //
+        return view('frontend.income.add_income');
     }
 
     /**

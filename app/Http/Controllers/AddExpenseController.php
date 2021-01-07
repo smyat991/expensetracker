@@ -31,7 +31,8 @@ class AddExpenseController extends Controller
       
        $total =DB::table('expense__records')
         ->where('user_id', '=', Auth::user()->id)
-       /* ->groupby(month('date'))*/
+        ->where('date', '=', date('Y-m-d'))
+        // ->groupby(month('date'))
         ->sum('amount');
 
 
@@ -42,7 +43,7 @@ class AddExpenseController extends Controller
         /*$total=Auth::user()->expense_records->sum('amount');*/
 
         
-        //dd($total);
+        // dd($total);
         //return response()->json(['foo'=>'bar']);
 
         return view('frontend.expense.expense_list',compact('expense_Records','total'));
@@ -58,9 +59,9 @@ class AddExpenseController extends Controller
         //         ->avg('price');
 
 
-        $total = DB:: table('expense_records')
-                -> where('date', created_at)
-                -> sum('amount');
+        // $total = DB:: table('expense_records')
+        //         -> where('date', created_at)
+        //         -> sum('amount');
     }
 
     /**
@@ -159,7 +160,7 @@ class AddExpenseController extends Controller
        
 
         // store data
-        $expense_Category=Expense_Record::find($id);
+        $expense_Record=Expense_Record::find($id);
         
         $expense_Record->amount = $request->amount;
         $expense_Record->note = $request->note;
@@ -198,7 +199,14 @@ class AddExpenseController extends Controller
         /*return response()
             ->json(['expense_records' => $expense_records , 'expense_filter' => $expense_filter]);*/
 
-            return response(json_decode($expense_records));
+// showing daily total
+            $total =DB::table('expense__records')
+        ->where('user_id', '=', Auth::user()->id)
+        ->where('date', '=', $expense_filter)
+        // ->groupby(month('date'))
+        ->sum('amount');
+
+            return response()-> json(['total'=> $total,'expense_records'=> $expense_records]);
 
 
     }

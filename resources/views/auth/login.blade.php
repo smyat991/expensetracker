@@ -100,7 +100,7 @@
             <div class="user_card">
                 <div class="d-flex justify-content-center">
                     <div class="brand_logo_container">
-                        <img src="https://i.dlpng.com/static/png/6532775_preview.png" class="brand_logo" alt="Logo">
+                        <img src="https://cdn3.iconfinder.com/data/icons/photo-camera-ui/512/statistics-report-chart-data-round-512.png" class="brand_logo" alt="Logo">
                     </div>
                 </div>
                 <div class="card-header d-flex justify-content-center form_container">{{ __('Login') }}</div>

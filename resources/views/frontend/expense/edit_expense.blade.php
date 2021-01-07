@@ -18,7 +18,7 @@
               </div>
               <div> 
               	<label for="note">Note:</label>
-              	<textarea class="form-control" name="note" id="note" cols="40" rows="5" placeholder="Description..." value="{{$expense_record->note}}"></textarea>
+              	<input class="form-control" name="note" id="note" cols="40" rows="5" placeholder="Description..." value="{{$expense_record->note}}">
           	 </div>
               <div class="form-group">
                 <label for="brandidInput">Expense Category</label>

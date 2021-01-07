@@ -56,7 +56,8 @@
                         <!-- Logo text -->
                         <span class="logo-text">
                             <!-- dark Logo text -->
-                            <img src="{{asset('backend_assets/plugins/images/logo-text.png')}}" alt="homepage" /> 
+                            <!-- <img src="{{asset('backend_assets/plugins/images/logo-text.png')}}" alt="homepage" /> -->
+                            <h3 style="color: black;">Expense Tracker</h3>
                         </span>
                     </a>
                     <!-- ============================================================== -->
@@ -129,13 +130,7 @@
                                 <span class="hide-menu">Dashboard</span>
                             </a>
                         </li>
-                        <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="profile.html"
-                                aria-expanded="false">
-                                <i class="fa fa-user" aria-hidden="true"></i>
-                                <span class="hide-menu">Profile</span>
-                            </a>
-                        </li>
+                        
                         <li class="sidebar-item">
                             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{route('expense_categories.index')}}"
                                 aria-expanded="false">
@@ -148,6 +143,13 @@
                                 aria-expanded="false">
                                 <i class="fa fa-table" aria-hidden="true"></i>
                                 <span class="hide-menu">Income Categories</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link " href="{{ url('/logout')}}"
+                                aria-expanded="false">
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                                <span class="hide-menu">Logout</span>
                             </a>
                         </li>
                        <!--  <li class="sidebar-item">

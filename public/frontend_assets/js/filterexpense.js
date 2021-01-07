@@ -20,7 +20,7 @@ $(document).ready(function(){
         $.post('expense_filter',{filter_date:filter_date},function(response){
             //console.log(response);
             var html="";
-                var i=0;
+                var j=1;
             html+=`
                 <thead class=" text-primary">
                       <th>
@@ -45,7 +45,9 @@ $(document).ready(function(){
                     </thead>
                     <tbody>
             `;
-            $.each(response,function(i,v){
+
+            console.log(response);
+            $.each(response.expense_records,function(i,v){
                 
                 console.log(v);
                 
@@ -53,7 +55,7 @@ $(document).ready(function(){
 
                 html+=`
                     <tr>
-                    <th>${i++}</th>
+                    <th>${j++}</th>
                     <th>${v.date}</th>
                     <th>${v.amount}</th>
                     <th>${v.note}</th>
@@ -65,13 +67,15 @@ $(document).ready(function(){
                   </tr> `
 
             });
-            html+=`</tbody>`;
+            html+=`<tr>
+                    <th>Total Amount</th>
+                    <th>${response.total}</th>
+                  </tr>
+                  </tbody>`;
 
             $('#searchlisttable').html(html);
             $('#listtable').hide();
             $('#searchlisttable').show();
-
-
 
         });
 

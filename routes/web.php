@@ -29,8 +29,8 @@ Route::resource('income_categories','IncomeCategoriesController');
 
 
 //frontend
-Route::get('home1', 'FrontendController@home1')->name('home1');
-
+Route::get('home1', 'HomeController@index')->name('home1');
+Route:: post('differentsearch', 'HomeController@differentsearch');
 
 
 // Route:: get('addCustomCategory', 'FrontendController@addCustomCategory')->name('addCustomCategory');
@@ -75,4 +75,9 @@ Route::post('userupdate/{id}', 'UserController@userupdate')->name('userupdate');
 // Route:: get('changePassword', 'ChangePasswordController@index');
 
 // Route::post('changePassword', 'ChangePasswordController@store')->name('changePassword');
+
+
+// logout
+
+Route:: get('/logout', 'LogoutController@logout');
 

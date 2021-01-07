@@ -44,6 +44,9 @@ border-radius: 100px;
                       <label for="amount">User_id:</label>
                       <input type="number" class="form-control" name="user_id"  id="user_id" value="">
                     </div> --}}
+
+                      <label for="note">Date:</label>
+                     <input type="date" id="expense_date" name="expense_date">
                     <div class="col-md-4">
                     <div class="form-group">
                       <label for="brandidInput">Income Category</label>

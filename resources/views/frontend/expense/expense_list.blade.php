@@ -33,8 +33,7 @@
                     <thead class=" text-primary">
                       <th>
                         ID
-                      </th>
-                      
+                      </th> 
                       <th>
                         Amount
                       </th>
@@ -51,35 +50,10 @@
                         Action
                       </th>
                     </thead>
-
-<!--                     <tbody>
-                      <tr>
-                        <td>
-                          Date SQL
-                        </td>
-                        <td>
-                          Note SQL
-                        </td>
-                        <td>
-                          User_ID SQL
-                        </td>
-                        <td>
-                          Category_ID SQL
-                        </td>
-                        <td>
-                          Amount SQL
-                        </td>
-                        <td>
-                          <button type="button" class="btn btn-warning btn-round">Edit</button>
-                        </td>
-                        <td>
-                          <button type="button" class="btn btn-danger btn-round">Delete</button>
-                        </td>
-                      </tr>
-                    </tbody> -->
                 </div>
               </div>
             </div>
+            <tbody>
                   @php $i=1; @endphp
                   @foreach($expense_Records as $expense_Record)
                   <tr>
@@ -99,14 +73,17 @@
                     </th>
                   </tr>
                   @endforeach
+                  <tr>
+                    <th>Total Amount</th>
+                    <td>{{$total}}</td>
+                  </tr>
                 </tbody>
               </table>
-            </div>
           </div>
         </div>
       </div>   
-    </div>    
-  </main>
+    </div>  
+                  
 </div>
 
 
